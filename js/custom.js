@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
         if (popup.style.display === 'block') {
           popup.style.left = rect.left + (rect.width / 2) + 'px';
-          popup.style.top = rect.bottom + 10 + 'px'; // 10px 下偏移
+          popup.style.top = (rect.bottom + 10) + 'px';
+          popup.style.position = 'absolute';
         }
       }
     };
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
         if (popup.style.display === 'block') {
           popup.style.left = rect.left + (rect.width / 2) + 'px';
-          popup.style.top = rect.bottom + 10 + 'px'; // 10px 下偏移
+          popup.style.top = (rect.bottom + 10) + 'px';
+          popup.style.position = 'absolute';
         }
       }
     };
