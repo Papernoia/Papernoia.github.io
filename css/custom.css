@@ -1,0 +1,13 @@
+/* 添加至 custom.css */
+.avatar-img img {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
+}
+#card-info-btn-author, #card-info-btn-sidebar {
+  display: flex !important;
+  visibility: visible !important;
+}
+.card-info-popup-img {
+  z-index: 2000 !important;
+}
