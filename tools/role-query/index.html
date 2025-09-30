@@ -1,0 +1,492 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>角色活动查询工具 | 迷蝶乡</title><meta name="author" content="纸歌"><meta name="copyright" content="纸歌"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; } #selection-area { margin-bottom: 20px; } select, button { padding: 10px; margin: 5px; font-size: 16px; border">
+<meta property="og:type" content="website">
+<meta property="og:title" content="角色活动查询工具">
+<meta property="og:url" content="http://papernoia.github.io/tools/role-query/index.html">
+<meta property="og:site_name" content="迷蝶乡">
+<meta property="og:description" content="body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; } #selection-area { margin-bottom: 20px; } select, button { padding: 10px; margin: 5px; font-size: 16px; border">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/39f28a51d10d712272cdc7ff071fe6af.jpg">
+<meta property="article:published_time" content="2025-09-30T07:56:15.199Z">
+<meta property="article:modified_time" content="2025-09-30T11:35:55.579Z">
+<meta property="article:author" content="纸歌">
+<meta property="article:tag" content="邦多利&#39;Morfonica&#39;桐谷透子&#39;Kirigaya_Tōko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/39f28a51d10d712272cdc7ff071fe6af.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/Morfonica.png"><link rel="canonical" href="http://papernoia.github.io/tools/role-query/index.html"><link rel="preconnect" href="https://npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@latest/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const hour = new Date().getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (theme === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else theme === 'light' ? activateLightMode() : activateDarkMode()
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://npm.elemecdn.com/@egjs/infinitegrid@latest/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '角色活动查询工具',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css">
+
+<style id="home-glass-css">
+
+  /* 侧栏：公告 / 最近文章 / 归档 卡片半透明 + 毛玻璃 */
+  #aside-content .card-widget.card-announcement,
+  #aside-content .card-widget.card-recent-post,
+  #aside-content .card-widget.card-archives,
+  #aside-content .card-widget.card-tags,
+  #aside-content #card-toc.card-widget,
+  #aside-content .card-widget.card-webinfo {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(4px) saturate(140%);
+  -webkit-backdrop-filter: blur(4px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  html[data-theme="dark"] #aside-content .card-widget.card-announcement,
+  html[data-theme="dark"] #aside-content .card-widget.card-recent-post,
+  html[data-theme="dark"] #aside-content .card-widget.card-archives,
+  html[data-theme="dark"] #aside-content .card-widget.card-tags,
+  html[data-theme="dark"] #aside-content #card-toc.card-widget,
+  html[data-theme="dark"] #aside-content .card-widget.card-webinfo {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.2);
+  }
+  /* 主页文章卡片半透明 + 毛玻璃 */
+  #recent-posts .recent-post-item {
+    /* 亮色模式：白色半透明 */
+    background: rgba(255, 255, 255, 0.36) !important;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+  /* 暗色模式 */
+  html[data-theme="dark"] #recent-posts .recent-post-item {
+    background: rgba(0, 0, 0, 0.36) !important;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+</style>
+
+
+
+
+
+<style>
+  @media (max-width: 768px){
+    #page-header{background-position:55% center!important;}
+    #web_bg{background-position:20% center!important;}
+    #recent-posts .post-bg{background-position:20% center!important;}
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250909222741_5909_8.png);"></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/Morfonica.png" alt="Logo"><span class="site-name">迷蝶乡</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">角色活动查询工具</h1></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+#selection-area { margin-bottom: 20px; }
+select, button { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+button { background: #007bff; color: white; cursor: pointer; }
+button:hover { background: #0056b3; }
+#reset-btn { background: #dc3545; }
+#reset-btn:hover { background: #c82333; }
+#role-checkboxes { margin-top: 10px; }
+label { display: block; margin: 8px 0; }
+#owned-roles { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+#owned-roles-list li { display: flex; align-items: center; margin-bottom: 10px; }
+#owned-roles-list img { width: 50px; height: 50px; margin-right: 10px; object-fit: cover; }
+#dialog { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0,0,0,0.2); max-width: 600px; max-height: 80vh; overflow-y: auto; z-index: 1000; }
+#dialog-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; }
+#dialog-close { float: right; cursor: pointer; font-weight: bold; }
+#dialog-content img { width: 50px; height: 50px; margin-right: 10px; object-fit: cover; vertical-align: middle; }
+</style>
+
+<div id="selection-area">
+    <h2>选择已拥有的角色</h2>
+    <div>
+        <label>选择队伍：</label>
+        <select id="team-select">
+            <option value="">-- 选择队伍 --</option>
+        </select>
+    </div>
+    <div>
+        <label>选择颜色：</label>
+        <select id="color-select" disabled>
+            <option value="">-- 先选择队伍 --</option>
+        </select>
+    </div>
+    <div id="role-checkboxes">
+        <!-- 角色复选框将在这里生成 -->
+    </div>
+    <button id="add-roles">添加所选角色</button>
+
+   <div id="owned-roles">
+        <h3>已拥有的角色</h3>
+        <ul id="owned-roles-list"></ul>
+   </div>
+</div>
+
+
+
+<div>
+    <button id="query-btn">查询可获得活动</button>
+    <button id="reset-btn">重置选择</button>
+</div>
+
+<div id="dialog-overlay"></div>
+<div id="dialog">
+    <span id="dialog-close">X</span>
+    <h3>查询结果</h3>
+    <div id="dialog-content"></div>
+</div>
+
+<script>
+// 定义队伍、颜色、每队独特角色
+const teams = ['PPP', 'AG', 'PP', 'Roselia', 'HHW', 'Monica', 'RAS', 'Mygo'];
+const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+const teamRoles = {
+    Team1: ['ksm', 'otae', 'rimi', 'saya', 'ars'],
+    Team2: ['ran', 'moca', 'hmr', 'tme', 'tsugu'],
+    Team3: ['aya', 'hina', 'cst', 'maya', 'eve'],
+    Team4: ['ykn', 'sayo', 'lisa', 'ako', 'rinko'],
+    Team5: ['kkr', 'kor', 'hgm', 'kanon', 'msk'],
+    Team6: ['msr', 'toko', 'nnm', 'tks', 'rui'],
+    Team7: ['layer', 'lock', 'chu2', 'masking', 'pareo'],
+    Team8: ['tmr', 'rana', 'soyo', 'taki', 'anon']
+};
+
+// 生成所有角色实例（8 × 4 × 5 = 160）
+const allRoles = [];
+teams.forEach(team => {
+    colors.forEach(color => {
+        const teamKey = `Team${teams.indexOf(team) + 1}`;
+        teamRoles[teamKey].forEach(role => {
+            const roleId = `${team}-${color}-${role}`;
+            allRoles.push({ team, color, role, id: roleId, baseId: `${team}-${role}` });
+        });
+    });
+});
+
+// 初始化队伍下拉菜单
+function initTeamSelect() {
+    const teamSelect = document.getElementById('team-select');
+    teams.forEach(team => {
+        const option = document.createElement('option');
+        option.value = team;
+        option.textContent = team;
+        teamSelect.appendChild(option);
+    });
+}
+
+// 队伍选择后更新颜色下拉菜单
+function updateColorSelect() {
+    const teamSelect = document.getElementById('team-select');
+    const colorSelect = document.getElementById('color-select');
+    colorSelect.innerHTML = '<option value="">-- 选择颜色 --</option>';
+    colorSelect.disabled = !teamSelect.value;
+    
+    if (teamSelect.value) {
+        colors.forEach(color => {
+            const option = document.createElement('option');
+            option.value = color;
+            option.textContent = color;
+            colorSelect.appendChild(option);
+        });
+    }
+}
+
+// 颜色选择后生成角色复选框
+function updateRoleCheckboxes() {
+    const teamSelect = document.getElementById('team-select');
+    const colorSelect = document.getElementById('color-select');
+    const roleCheckboxes = document.getElementById('role-checkboxes');
+    roleCheckboxes.innerHTML = '';
+    
+    if (teamSelect.value && colorSelect.value) {
+        const teamKey = `Team${teams.indexOf(teamSelect.value) + 1}`;
+        teamRoles[teamKey].forEach(role => {
+            const label = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = `${teamSelect.value}-${colorSelect.value}-${role}`;
+            label.appendChild(checkbox);
+            label.append(` ${role}`);
+            roleCheckboxes.appendChild(label);
+        });
+    }
+}
+
+// 加载角色数据（40个角色，Team-Role）
+async function loadRoles() {
+    try {
+        const response = await fetch('/data/roles.json');
+        if (!response.ok) throw new Error('无法加载角色数据');
+        return await response.json();
+    } catch (error) {
+        console.error('加载角色错误:', error);
+        return [];
+    }
+}
+
+// 加载活动数据
+async function loadEvents() {
+    try {
+        const response = await fetch('/data/events.json');
+        if (!response.ok) throw new Error('无法加载活动数据');
+        return await response.json();
+    } catch (error) {
+        console.error('加载活动错误:', error);
+        return [];
+    }
+}
+
+// 添加已选角色
+let ownedRoles = [];
+function addSelectedRoles() {
+    const selected = Array.from(document.querySelectorAll('#role-checkboxes input:checked'))
+        .map(cb => cb.value);
+    selected.forEach(roleId => {
+        if (!ownedRoles.includes(roleId)) {
+            ownedRoles.push(roleId);
+        }
+    });
+    updateOwnedRolesList();
+}
+
+// 更新已拥有角色列表，显示卡面和描述（从roles.json）
+async function updateOwnedRolesList() {
+    const list = document.getElementById('owned-roles-list');
+    list.innerHTML = '';
+    const rolesData = await loadRoles();
+    
+    ownedRoles.forEach(roleId => {
+        const baseId = roleId.split('-').slice(0, 2).join('-'); // Team-Role
+        const roleData = rolesData.find(r => r.id === baseId) || { cardImage: '' };
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <img src="${roleData.cardImage || 'https://via.placeholder.com/50'}" alt="${roleId}">
+            <span>${roleId}</span>
+        `;
+        list.appendChild(li);
+    });
+}
+
+// 重置选择
+function resetSelections() {
+    ownedRoles = [];
+    updateOwnedRolesList();
+    document.getElementById('team-select').value = '';
+    document.getElementById('color-select').innerHTML = '<option value="">-- 先选择队伍 --</option>';
+    document.getElementById('color-select').disabled = true;
+    document.getElementById('role-checkboxes').innerHTML = '';
+}
+
+// 查询逻辑：仅显示包含未拥有角色且包含已选择队-色的活动
+async function queryEvents() {
+    const missingRoles = allRoles.filter(role => !ownedRoles.includes(role.id));
+    const ownedTeamColors = [...new Set(ownedRoles.map(roleId => roleId.split('-').slice(0, 2).join('-')))]; // Team-Color
+    const events = await loadEvents();
+    const results = [];
+    
+    events.forEach(event => {
+        // 检查活动是否包含已选择队-色的角色
+        const hasOwnedTeamColor = ownedTeamColors.length > 0 && event.roles.some(role => ownedTeamColors.includes(`${role.team}-${role.color}`));
+        if (ownedTeamColors.length > 0 && !hasOwnedTeamColor) return; // 排除不包含已选择队-色的活动
+        
+        const obtainable = event.roles
+            .filter(role => missingRoles.some(m => m.id === role.id))
+            .map(r => ({
+                id: r.id,
+                display: `${r.team}-${r.color}-${r.role}`,
+                cardImage: r.cardImage,
+                description: r.description
+            }));
+        if (obtainable.length > 0) {
+            results.push({
+                eventName: event.name,
+                obtainable: obtainable
+            });
+        }
+    });
+    
+    showDialog(results);
+}
+
+// 显示弹窗，包含卡面和描述（从events.json）
+function showDialog(results) {
+    const dialog = document.getElementById('dialog');
+    const overlay = document.getElementById('dialog-overlay');
+    const content = document.getElementById('dialog-content');
+    
+    content.innerHTML = '';
+    if (results.length === 0) {
+        content.innerHTML = '<p>没有匹配的活动。</p>';
+    } else {
+        results.forEach(res => {
+            const div = document.createElement('div');
+            const roleItems = res.obtainable.map(r => `
+                <div style="margin-bottom: 10px;">
+                    <img src="${r.cardImage || 'https://via.placeholder.com/50'}" alt="${r.display}">
+                    <span>${r.display}</span>
+                    <p>${r.description || '无描述'}</p>
+                </div>
+            `).join('');
+            div.innerHTML = `<strong>${res.eventName}</strong>:<br>${roleItems}`;
+            content.appendChild(div);
+        });
+    }
+    
+    dialog.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// 关闭弹窗
+function closeDialog() {
+    document.getElementById('dialog').style.display = 'none';
+    document.getElementById('dialog-overlay').style.display = 'none';
+}
+
+// 初始化
+window.onload = () => {
+    initTeamSelect();
+    document.getElementById('team-select').addEventListener('change', () => {
+        updateColorSelect();
+        updateRoleCheckboxes();
+    });
+    document.getElementById('color-select').addEventListener('change', updateRoleCheckboxes);
+    document.getElementById('add-roles').addEventListener('click', addSelectedRoles);
+    document.getElementById('query-btn').addEventListener('click', queryEvents);
+    document.getElementById('reset-btn').addEventListener('click', resetSelections);
+    document.getElementById('dialog-close').addEventListener('click', closeDialog);
+    document.getElementById('dialog-overlay').addEventListener('click', closeDialog);
+};
+</script><link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://papernoia.github.io">纸歌</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://papernoia.github.io/tools/role-query/">http://papernoia.github.io/tools/role-query/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://papernoia.github.io" target="_blank">迷蝶乡</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/39f28a51d10d712272cdc7ff071fe6af.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://npm.elemecdn.com/butterfly-extsrc@latest/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/butterfly-extsrc@latest/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav id="pagination"><div class="pagination"></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 1.1em; color: #999">摘抄</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 1.1em; color: #999">测试</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">5.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-30T13:07:40.231Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 纸歌</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><style>
+  /* 个人资料卡 */
+  #aside-content .card-info {
+    background: rgba(255, 255, 255, 0.5); /* 浅色模式 */
+  }
+  @media (prefers-color-scheme: dark) {
+    /* 深色模式：个人资料卡 */
+    #aside-content .card-info {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+</style>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
