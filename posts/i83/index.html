@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>角色活动查询工具 | Tōk</title><meta name="author" content="纸坊主"><meta name="copyright" content="纸坊主"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="查询未来活动可获得成员">
+<meta property="og:type" content="article">
+<meta property="og:title" content="角色活动查询工具">
+<meta property="og:url" content="http://papernoia.github.io/posts/i83/index.html">
+<meta property="og:site_name" content="Tōk">
+<meta property="og:description" content="查询未来活动可获得成员">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054824_78_215.jpg">
+<meta property="article:published_time" content="2025-10-20T17:48:39.166Z">
+<meta property="article:modified_time" content="2025-10-20T21:50:34.893Z">
+<meta property="article:author" content="纸坊主">
+<meta property="article:tag" content="邦多利&#39;Morfonica&#39;桐谷透子&#39;Kirigaya_Tōko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054824_78_215.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "角色活动查询工具",
+  "url": "http://papernoia.github.io/posts/i83/",
+  "image": "https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054824_78_215.jpg",
+  "datePublished": "2025-10-20T17:48:39.166Z",
+  "dateModified": "2025-10-20T21:50:34.893Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "纸坊主",
+      "url": "http://papernoia.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/Morfonica.png"><link rel="canonical" href="http://papernoia.github.io/posts/i83/index.html"><link rel="preconnect" href="https://npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@latest/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://npm.elemecdn.com/@egjs/infinitegrid@latest/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '角色活动查询工具',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script src="D:/Blog/themes/butterfly/source/live2d-widget/dist/autoload.js"></script>
+
+<style id="home-glass-css">
+
+  /* 侧栏：公告 / 最近文章 / 归档 卡片半透明 + 毛玻璃 */
+  #aside-content .card-widget.card-announcement,
+  #aside-content .card-widget.card-recent-post,
+  #aside-content .card-widget.card-archives,
+  #aside-content .card-widget.card-tags,
+  #aside-content #card-toc.card-widget,
+  #aside-content .card-widget.card-webinfo {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(4px) saturate(140%);
+  -webkit-backdrop-filter: blur(4px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  html[data-theme="dark"] #aside-content .card-widget.card-announcement,
+  html[data-theme="dark"] #aside-content .card-widget.card-recent-post,
+  html[data-theme="dark"] #aside-content .card-widget.card-archives,
+  html[data-theme="dark"] #aside-content .card-widget.card-tags,
+  html[data-theme="dark"] #aside-content #card-toc.card-widget,
+  html[data-theme="dark"] #aside-content .card-widget.card-webinfo {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.2);
+  }
+  /* 主页文章卡片半透明 + 毛玻璃 */
+  #recent-posts .recent-post-item {
+    /* 亮色模式：白色半透明 */
+    background: rgba(255, 255, 255, 0.36) !important;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+  /* 暗色模式 */
+  html[data-theme="dark"] #recent-posts .recent-post-item {
+    background: rgba(0, 0, 0, 0.36) !important;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+</style>
+
+
+
+
+
+<style>
+  @media (max-width: 768px){
+    #page-header{background-position:55% center!important;}
+    #web_bg{background-position:20% center!important;}
+    #recent-posts .post-bg{background-position:20% center!important;}
+  }
+</style>
+<meta name="generator" content="Hexo 8.0.0"></head><body><div id="web_bg" style="background-image: url(https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/0626AD252AC4AD74CDBECFEADA5F472A.png);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054824_78_215.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/20260211102227946.png" alt="Logo"><span class="site-name">Tōk</span></a><a class="nav-page-title" href="/"><span class="site-name">角色活动查询工具</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">角色活动查询工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-20T17:48:39.166Z" title="发表于 2025-10-21 01:48:39">2025-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-20T21:50:34.893Z" title="更新于 2025-10-21 05:50:34">2025-10-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout hide-aside" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><style>
+body { font-family: Arial, sans-serif; margin: 0 auto; padding: 20px; }
+#selection-area { margin-bottom: 20px; }
+select, button { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+button { background: #007bff; color: white; cursor: pointer; }
+button:hover { background: #0056b3; }
+#reset-btn { background: #dc3545; }
+#reset-btn:hover { background: #c82333; }
+#role-checkboxes { margin-top: 10px; }
+label { display: block; margin: 8px 0; }
+.custom-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.custom-checkbox:checked {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+.custom-checkbox:checked::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    line-height: 16px;
+}
+.custom-checkbox:hover {
+    border-color: #0056b3;
+}
+#owned-roles { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+#owned-roles-list li { display: flex; align-items: center; margin-bottom: 10px; }
+#owned-roles-list img { width: 230px; height: 230px; margin-right: 10px; object-fit: cover; object-position: center 100px; }
+#dialog { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0,0,0,0.2); max-width: 90vw; width: 600px; max-height: 80vh; overflow-y: auto; z-index: 1000; }
+#dialog-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; }
+#dialog-close { float: right; cursor: pointer; font-weight: bold; }
+#dialog-content img {
+    width: 230px;
+    height: 330px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cell-style {
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.same-team-color { font-weight: bold; } /* 同色同队加粗 */
+.same-team-diff-color { font-size: 0.8em; color: #666; } /* 同队不同色字号小、颜色浅 */
+#main-flex-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+#select-flex-row {
+display: flex;
+align-items: flex-start;
+gap: 24px;
+margin-top: 10px;
+}
+#select-flex-row #role-checkboxes {
+flex: 1 1 300px; /* 左侧复选框区域自适应 /
+min-width: 240px;
+}
+#select-flex-row #owned-roles {
+flex: 0 0 260px; / 右侧已拥有区域固定宽度，可按需调整 */
+max-width: 260px;
+margin-top: 0;
+border-top: none;
+padding-top: 0;
+}
+@media (max-width: 900px) {
+#select-flex-row { flex-direction: column; gap: 0; }
+#select-flex-row #role-checkboxes,
+#select-flex-row #owned-roles { flex: 1 1 auto; max-width: 100%; }
+}
+#owned-roles {
+    width: 240px;       /* 左栏固定宽度，按需调整 */
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+}
+#role-checkboxes {
+    flex: 1;            /* 右侧复选框区域自适应 */
+}
+@media (max-width: 900px) {
+    #select-flex-row { flex-direction: column; gap: 0; }
+    #owned-roles { width: 100%; }
+}
+#owned-roles-list {
+display: flex; /* 关键：让 li 横向排 */
+flex-direction: row;
+flex-wrap: wrap; /* 一行放不下就换行；不想换行可改为 nowrap */
+gap: 8px; /* 图片间距 */
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+/* li 自身用什么布局都行，这里不强制改动你原有的 li 内部布局 */
+#owned-roles-list > li { margin: 0; }
+
+/* 需要只显示图片可隐藏文字 */
+#owned-roles-list > li > span { display: none; }
+
+/* 小屏：改为纵向堆叠 */
+@media (max-width: 900px) {
+#owned-roles-list {
+flex-direction: column;
+flex-wrap: nowrap;
+gap: 6px;
+}
+}
+</style>
+
+<div id="main-flex-area">
+  <div id="selection-area">
+      <h2>选择已拥有的角色</h2>
+      <div>
+          <label>选择队伍：</label>
+          <select id="team-select">
+              <option value="">-- 选择队伍 --</option>
+          </select>
+      </div>
+      <div>
+          <label>选择颜色：</label>
+          <select id="color-select" disabled>
+              <option value="">-- 先选择队伍 --</option>
+          </select>
+      </div>
+<div id="select-flex-row">  <div id="role-checkboxes">
+    <!-- 角色复选框将在这里生成 -->
+  </div>
+  <div id="owned-roles">
+    <ul id="owned-roles-list"></ul>
+  </div>
+
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;<br>&lt;/div&gt;</p>
+<div>
+    <button id="query-btn">查询可获得活动</button>
+    <button id="reset-btn">重置选择</button>
+</div>
+
+<div id="dialog-overlay"></div>
+<div id="dialog">
+    <span id="dialog-close">X</span>
+    <h3>查询结果</h3>
+    <div id="dialog-content"></div>
+</div>
+
+<script>
+// 定义队伍、颜色、每队独特角色及其中文名映射
+const teams = ['PPP', 'AG', 'PP', 'Roselia', 'HHW', 'Monica', 'RAS', 'Mygo'];
+const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+const teamRoles = {
+    Team1: ['ksm', 'otae', 'rimi', 'saya', 'ars'],
+    Team2: ['ran', 'moca', 'hmr', 'tme', 'tsugu'],
+    Team3: ['aya', 'hina', 'cst', 'maya', 'eve'],
+    Team4: ['ykn', 'sayo', 'lisa', 'ako', 'rinko'],
+    Team5: ['kkr', 'kor', 'hgm', 'kanon', 'msk'],
+    Team6: ['msr', 'toko', 'nnm', 'tks', 'rui'],
+    Team7: ['layer', 'lock', 'chu2', 'masking', 'pareo'],
+    Team8: ['tmr', 'rana', 'soyo', 'taki', 'anon']
+};
+const roleNameMap = {
+    'ksm': '户山香澄', 'otae': '花园多惠', 'rimi': '牛込里美', 'saya': '山吹沙绫', 'ars': '市谷有咲',
+    'ran': '美竹兰', 'moca': '青叶摩卡', 'hmr': '上原绯玛丽', 'tme': '宇田川巴', 'tsugu': '羽泽鸫',
+    'aya': '丸山彩', 'hina': '冰川日菜', 'cst': '白鹭千圣', 'maya': '大和麻弥', 'eve': '若宫伊芙',
+    'ykn': '凑友希那', 'sayo': '冰川纱夜', 'lisa': '今井丽莎', 'ako': '宇田川亚子', 'rinko': '白金燐子',
+    'kkr': '弦卷心', 'kor': '濑田薰', 'hgm': '北泽育美', 'kanon': '松原花音', 'msk': '奥泽美咲',
+    'msr': '仓田真白', 'toko': '桐谷透子', 'nnm': '广町七深', 'tks': '二叶筑紫', 'rui': '八潮瑠唯',
+    'layer': 'layer', 'lock': 'lock', 'chu2': 'Chu2', 'masking': 'masking', 'pareo': 'pareo',
+    'tmr': '高松灯', 'rana': '要乐奈', 'soyo': '长崎素世', 'taki': '椎名立希', 'anon': '千早爱音'
+};
+const colorNameMap = {
+    'Red': '红色',
+    'Blue': '蓝色',
+    'Green': '绿色',
+    'Yellow': '橙色'
+};
+// 生成所有角色实例（8 × 4 × 5 = 160）
+const allRoles = [];
+teams.forEach(team => {
+    colors.forEach(color => {
+        const teamKey = `Team${teams.indexOf(team) + 1}`;
+        teamRoles[teamKey].forEach(role => {
+            const roleId = `${team}-${color}-${role}`;
+            allRoles.push({ team, color, role, id: roleId, baseId: `${team}-${role}` });
+        });
+    });
+});
+
+// 初始化队伍下拉菜单
+function initTeamSelect() {
+    const teamSelect = document.getElementById('team-select');
+    teams.forEach(team => {
+        const option = document.createElement('option');
+        option.value = team;
+        option.textContent = team;
+        teamSelect.appendChild(option);
+    });
+}
+
+// 队伍选择后更新颜色下拉菜单
+function updateColorSelect() {
+    const teamSelect = document.getElementById('team-select');
+    const colorSelect = document.getElementById('color-select');
+    colorSelect.innerHTML = '<option value="">-- 选择颜色 --</option>';
+    colorSelect.disabled = !teamSelect.value;
+
+    if (teamSelect.value) {
+        colors.forEach(color => {
+            const option = document.createElement('option');
+            option.value = color;
+            option.textContent = colorNameMap[color] || color;
+            colorSelect.appendChild(option);
+        });
+    }
+}
+
+// 颜色选择后生成角色复选框
+function updateRoleCheckboxes() {
+    const teamSelect = document.getElementById('team-select');
+    const colorSelect = document.getElementById('color-select');
+    const roleCheckboxes = document.getElementById('role-checkboxes');
+    roleCheckboxes.innerHTML = '';
+
+    if (teamSelect.value && colorSelect.value) {
+        const teamKey = `Team${teams.indexOf(teamSelect.value) + 1}`;
+        teamRoles[teamKey].forEach(role => {
+            const label = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'custom-checkbox';
+            checkbox.value = `${teamSelect.value}-${colorSelect.value}-${role}`;
+            // 根据 ownedRoles 设置初始选中状态
+            checkbox.checked = ownedRoles.includes(checkbox.value);
+
+            // 绑定 change 事件
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    if (!ownedRoles.includes(this.value)) {
+                        ownedRoles.push(this.value);
+                    }
+                } else {
+                    ownedRoles = ownedRoles.filter(id => id !== this.value);
+                }
+                updateOwnedRolesList();
+            });
+
+            label.appendChild(checkbox);
+            label.append(` ${roleNameMap[role] || role}`); // 使用中文名
+            roleCheckboxes.appendChild(label);
+        });
+    }
+}
+
+// 加载角色数据（40个角色，Team-Role）
+async function loadRoles() {
+    try {
+        const response = await fetch('/data/roles.json');
+        if (!response.ok) {
+            console.error('加载 roles.json 失败，状态码:', response.status);
+            throw new Error('无法加载角色数据');
+        }
+        const data = await response.json();
+        console.log('加载的 roles.json 数据:', data); // 调试：输出 roles.json 内容
+        return data;
+    } catch (error) {
+        console.error('加载角色错误:', error);
+        return [];
+    }
+}
+
+// 添加已选角色（已移除按钮，此函数可简化或移除）
+let ownedRoles = [];
+let lastColorSelected = '';
+function addSelectedRoles() {
+    // 移除按钮后此函数不再需要，可保留但不使用
+}
+
+// 更新已拥有角色列表，显示卡面和描述（从roles.json），使用中文名
+async function updateOwnedRolesList() {
+    const list = document.getElementById('owned-roles-list');
+    list.innerHTML = '';
+    const rolesData = await loadRoles();
+
+    ownedRoles.forEach(roleId => {
+        const parts = roleId.split('-'); // [Team, Color, Role]
+        const baseId = `${parts[0]}-${parts[2]}`; // Team-Role
+        const roleData = rolesData.find(r => r.id === baseId) || { cardImage: 'https://via.placeholder.com/50' };
+        if (!rolesData.find(r => r.id === baseId)) {
+            console.warn(`未找到 baseId: ${baseId}，使用占位符图片`); // 调试：输出未找到的 baseId
+        }
+        console.log(`角色 ${roleId} 的卡面: ${roleData.cardImage}`); // 调试：输出卡面 URL
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <img src="${roleData.cardImage}" alt="${roleId}">
+            <span>${roleNameMap[parts[2]] || parts[2]}</span>  <!-- 显示中文名 -->
+        `;
+        list.appendChild(li);
+    });
+}
+
+// 重置选择
+function resetSelections() {
+    ownedRoles = [];
+    updateOwnedRolesList();
+    document.getElementById('team-select').value = '';
+    document.getElementById('color-select').innerHTML = '<option value="">-- 先选择队伍 --</option>';
+    document.getElementById('color-select').disabled = true;
+    document.getElementById('role-checkboxes').innerHTML = '';
+}
+
+// 加载活动数据
+async function loadEvents() {
+    try {
+        const response = await fetch('/data/events.json');
+        if (!response.ok) {
+            console.error('加载 events.json 失败，状态码:', response.status);
+            throw new Error('无法加载活动数据');
+        }
+        const data = await response.json();
+        console.log('加载的 events.json 数据:', data); // 调试：输出 events.json 内容
+        return data;
+    } catch (error) {
+        console.error('加载活动错误:', error);
+        return [];
+    }
+}
+
+// 查询逻辑：仅显示包含未拥有角色且包含已选择队-色的活动
+async function queryEvents() {
+    const missingRoles = allRoles.filter(role => !ownedRoles.includes(role.id));
+    const ownedTeamColors = [...new Set(ownedRoles.map(roleId => roleId.split('-').slice(0, 2).join('-')))]; // Team-Color
+    const ownedTeams = [...new Set(ownedRoles.map(roleId => roleId.split('-')[0]))]; // Team only
+    const events = await loadEvents();
+    const results = [];
+
+    events.forEach(event => {
+        // 检查活动是否包含已选择队-色的角色
+        const hasOwnedTeamColor = ownedTeamColors.length === 0 || event.roles.some(role => 
+            ownedTeamColors.includes(`${role.team}-${role.color}`)
+        );
+        if (!hasOwnedTeamColor) return; // 排除不包含已选择队-色的活动
+
+        const obtainable = event.roles
+            .filter(role => missingRoles.some(m => m.id === role.id))
+            .map(r => ({
+                id: r.id,
+                display: `${r.team}-${r.color}-${r.role}`,
+                cardImage: r.cardImage,
+                description: r.description,
+                isSameTeamColor: ownedTeamColors.includes(`${r.team}-${r.color}`), // 同色同队
+                isSameTeamDiffColor: ownedTeams.includes(r.team) && !ownedTeamColors.includes(`${r.team}-${r.color}`) // 同队不同色
+            }));
+        // 排序：同色同队（isSameTeamColor: true）排在前面
+        obtainable.sort((a, b) => {
+            if (a.isSameTeamColor && !b.isSameTeamColor) return -1;
+            if (!a.isSameTeamColor && b.isSameTeamColor) return 1;
+            return 0; // 保持其他角色顺序
+        });
+        if (obtainable.length > 0) {
+            results.push({
+                eventName: event.name,
+                obtainable: obtainable
+            });
+        }
+    });
+
+    showDialog(results);
+}
+
+// 显示弹窗，包含卡面和描述（从events.json），同色同队加粗且排在前面，同队不同色字号小颜色浅
+function showDialog(results) {
+    const dialog = document.getElementById('dialog');
+    const overlay = document.getElementById('dialog-overlay');
+    const content = document.getElementById('dialog-content');
+
+    content.innerHTML = '';
+    if (results.length === 0) {
+        content.innerHTML = '<p>没有匹配的活动。</p>';
+    } else {
+        results.forEach(res => {
+            const div = document.createElement('div');
+            const roleItems = res.obtainable.map(r => `
+                <div style="margin-bottom: 10px;">
+                    <img src="${r.cardImage || 'https://via.placeholder.com/50'}" alt="${r.display}">
+                    <div class="cell-style">${r.description || '无描述'}</div>
+                </div>
+            `).join('');
+            div.innerHTML = `<strong>${res.eventName}</strong>:<br>${roleItems}`;
+            content.appendChild(div);
+        });
+    }
+
+    dialog.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// 关闭弹窗
+function closeDialog() {
+    document.getElementById('dialog').style.display = 'none';
+    document.getElementById('dialog-overlay').style.display = 'none';
+}
+
+// 初始化
+window.onload = () => {
+    initTeamSelect();
+    document.getElementById('team-select').addEventListener('change', () => {
+        lastColorSelected = '';
+        updateColorSelect();
+        updateRoleCheckboxes();
+    });
+    document.getElementById('color-select').addEventListener('change', (e) => {
+    const newColor = e.target.value;
+    // 如果之前选过颜色，且这次选择了不同的非空颜色，就清空已选角色
+    if (lastColorSelected && newColor && newColor !== lastColorSelected) {
+    ownedRoles = [];
+    updateOwnedRolesList(); // 立即刷新“已拥有的角色”列表
+    }
+    lastColorSelected = newColor;
+    updateRoleCheckboxes(); // 重新生成复选框
+    });
+
+
+
+    document.getElementById('query-btn').addEventListener('click', queryEvents);
+    document.getElementById('reset-btn').addEventListener('click', resetSelections);
+    document.getElementById('dialog-close').addEventListener('click', closeDialog);
+    document.getElementById('dialog-overlay').addEventListener('click', closeDialog);
+};
+</script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://papernoia.github.io">纸坊主</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://papernoia.github.io/posts/i83/">http://papernoia.github.io/posts/i83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://papernoia.github.io" target="_blank">Tōk</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054824_78_215.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://npm.elemecdn.com/butterfly-extsrc@latest/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/butterfly-extsrc@latest/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/p4/" title="摘4"><img class="cover" src="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/Hades2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">摘4</div></div><div class="info-2"><div class="info-item-1">超大型家庭伦理连续剧</div></div></div></a><a class="pagination-related" href="/posts/60810/" title="钓盆栽"><img class="cover" src="https://papernoia-1313533248.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251021054811_72_215.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">钓盆栽</div></div><div class="info-2"><div class="info-item-1">2~4天刷新</div></div></div></a></nav></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 纸坊主</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script type="module">
+  import { loadOml2d } from 'oh-my-live2d';
+  loadOml2d({
+    tips: (_, currentIndex) => {
+      if (currentIndex === 0) {
+        return {
+          copyTips: {
+            message: ['复制了啥!@!?']
+          },
+          idleTips: {
+            wordTheDay: true
+          }
+        };
+      } else {
+        return {
+          idleTips: {
+            wordTheDay: false
+          }
+        };
+      }
+    }
+  });
+</script>
+<script defer src="/live2d-widget/autoload.js"></script><style>
+  /* 个人资料卡 */
+  #aside-content .card-info {
+    background: rgba(255, 255, 255, 0.5); /* 浅色模式 */
+  }
+  @media (prefers-color-scheme: dark) {
+    /* 深色模式：个人资料卡 */
+    #aside-content .card-info {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+</style>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"right",mobileDisplay:false,models:[{"path":["/live2d_models/sherry/雪梨酱.model3.json"],"position":[-60,35],"scale":0.15,"stageStyle":{"width":250,"height":250},"mobilePosition":[-10,23],"mobileScale":0.1,"mobileStageStyle":{"width":180,"height":166},"motionPreloadStrategy":"ALL"}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15200,message:["You only live once","加油啊"]}}});</script><!-- hexo injector body_end end --></body></html>
