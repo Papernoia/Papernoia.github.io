@@ -45,6 +45,20 @@ html[data-theme="dark"] .click-word {
   .click-word { font-size: 18px; }
 }
 
+/* 系统开启「减少动态效果」时:不上浮、不旋转,只淡入淡出 */
+@media (prefers-reduced-motion: reduce) {
+  .click-word {
+    animation: click-word-fade 1.1s ease-out forwards;
+  }
+}
+
+@keyframes click-word-fade {
+  0% { opacity: 0; transform: translate(-50%, -50%); }
+  15% { opacity: 1; transform: translate(-50%, -50%); }
+  75% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -50%); }
+}
+
 /* ===== 霞鹜文楷:仅用于「摘抄」分类的文章正文 ===== */
 .font-wenkai {
   font-family: 'LXGW WenKai', 'Kaiti SC', 'STKaiti', 'KaiTi', serif;

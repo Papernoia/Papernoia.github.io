@@ -2,8 +2,6 @@
   if (window.__clickWordsInit) return
   window.__clickWordsInit = true
 
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
   const WORDS = [
     { text: '【异议】', color: '#e53935' },
     { text: '【反驳】', color: '#2e9d4f' },
